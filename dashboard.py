@@ -4,6 +4,17 @@ import gspread
 from google.oauth2.service_account import Credentials
 import plotly.express as px
 from datetime import datetime
+import streamlit as st
+import json
+import streamlit as st
+from google.oauth2 import service_account
+
+# Create credentials from the secret dictionary
+creds = service_account.Credentials.from_service_account_info(
+    st.secrets["gcp_service_account"]
+)
+
+# Now use 'creds' to connect to GCS, BigQuery, or Firestore
 
 # --- CONFIGURATION: MULTIPLE SHEETS ---
 # Add as many campaigns as you want here. 
